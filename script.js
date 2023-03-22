@@ -6,9 +6,13 @@ const tabContentItems = document.querySelectorAll('.tab-content-item');
 function selectItem(e) {
   removeBorder();
   removeShow();
-  // Add borfer to current tab
+  // Add border to current tab
   this.classList.add('tab-border');
   //   Grab Content Item from the DOM
+  //   console.log(this.id);
+  const tabContentItem = document.querySelector(`#${this.id}-content`);
+  //Add show class
+  tabContentItem.classList.add('show');
 }
 
 function removeBorder() {
